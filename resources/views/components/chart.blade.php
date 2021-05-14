@@ -1,11 +1,16 @@
+<div class="container">
+    <canvas id="{{ $canvas }}"></canvas>
+</div>
+
 <script>
-    massPopChart = new Chart({{ $name }}, {
+    massPopChart = new Chart({{ $canvas }}, {
     type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    // var app = @json($name);
     data: {
-        labels: ['Бочка 1'],
+        labels: @json($name),
         datasets: [{
             label: 'Запонение',
-            data: [{{ $weight }}],
+            data: @json($weight),
             //backgroundColor:'green',
             backgroundColor: [
                 'rgba(255, 99, 132, 0.6)',

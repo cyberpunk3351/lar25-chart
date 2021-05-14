@@ -13,10 +13,8 @@
 
 <body>
 
-    <div class="container">
-        <canvas id="myChart"></canvas>
-    </div>
-    <x-chart name="myChart" weight="1000"/>
+    <x-chart canvas="canvas1" :name="['a', 'b']" :weight="['617594', '181045']"/>
+    <x-chart canvas="canvas2" :name="['c', 'd', 'e']" :weight="['617594', '181045', '432422']"/>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

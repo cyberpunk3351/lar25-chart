@@ -7,17 +7,20 @@ use Illuminate\View\Component;
 class Chart extends Component
 {
     public $name;
+
     public $weight;
+    public $canvas;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $weight)
+    public function __construct($name, $weight, $canvas)
     {
         $this->name = $name;
         $this->weight = $weight;
+        $this->canvas = $canvas;
     }
 
     /**
